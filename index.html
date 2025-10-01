@@ -27,7 +27,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #667eea;
             color: white;
             padding: 25px 40px;
         }
@@ -51,6 +51,12 @@
             font-size: 0.85em;
         }
         
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
         .contact-info a {
             color: white;
             text-decoration: none;
@@ -66,7 +72,7 @@
         }
         
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         
         .section-title {
@@ -82,29 +88,48 @@
             font-size: 0.9em;
             line-height: 1.5;
             color: #555;
+            margin-bottom: 8px;
+        }
+        
+        .summary ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .summary li {
+            margin-bottom: 5px;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 6px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
             margin-top: 10px;
         }
         
-        .skill-item {
-            background: #f8f9fa;
-            padding: 6px 12px;
-            border-radius: 5px;
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            font-size: 0.85em;
+            color: #667eea;
+            margin-bottom: 4px;
+        }
+        
+        .skill-category-content {
             font-size: 0.8em;
-            border-left: 3px solid #667eea;
+            color: #555;
+            line-height: 1.4;
         }
         
         .experience-item {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         
         .company-header {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         
         .company-name {
@@ -124,24 +149,24 @@
             font-weight: 600;
             color: #667eea;
             font-size: 0.95em;
-            margin-top: 8px;
+            margin-top: 10px;
             margin-bottom: 2px;
         }
         
         .job-period {
             color: #888;
             font-size: 0.8em;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         
         .job-description {
             margin-left: 0;
-            line-height: 1.4;
-            font-size: 0.85em;
+            line-height: 1.5;
+            font-size: 0.9em;
         }
         
         .job-description li {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             padding-left: 5px;
         }
         
@@ -162,22 +187,16 @@
         }
         
         .additional-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .info-block h3 {
-            font-size: 0.9em;
-            color: #667eea;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-        
-        .info-block p {
-            color: #555;
-            line-height: 1.4;
             font-size: 0.85em;
+            line-height: 1.5;
+        }
+        
+        .info-line {
+            margin-bottom: 6px;
+        }
+        
+        .info-line strong {
+            color: #667eea;
         }
         
         @media print {
@@ -192,7 +211,18 @@
             }
             
             .header {
-                background: #667eea;
+                background: white;
+                color: #333;
+                border-bottom: 3px solid #667eea;
+            }
+            
+            .header .subtitle {
+                color: #555;
+            }
+            
+            .contact-info a {
+                color: #333;
+                border-bottom-color: #333;
             }
             
             .content {
@@ -212,6 +242,10 @@
             .header h1 {
                 font-size: 2em;
             }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -219,12 +253,12 @@
     <div class="container">
         <div class="header">
             <h1>PEDRO MACHADO</h1>
-            <div class="subtitle">Android Engineering Leader | Technical Problem Solver | Team Builder</div>
+            <div class="subtitle">Engineering Leader | Mobile & Platform Expertise | Building High-Performing Teams</div>
             <div class="contact-info">
-                <span>📍 Porto, Portugal</span>
-                <span>✉️ <a href="mailto:pedromfmachado@gmail.com">pedromfmachado@gmail.com</a></span>
-                <span>🔗 <a href="https://www.linkedin.com/in/pedromfmachado" target="_blank">LinkedIn</a></span>
-                <span>🌐 <a href="https://paginas.fe.up.pt/~ei07074/personal" target="_blank">Portfolio</a></span>
+                <span>Porto, Portugal</span>
+                <span><a href="mailto:pedromfmachado@gmail.com">pedromfmachado@gmail.com</a></span>
+                <span><a href="https://www.linkedin.com/in/pedromfmachado" target="_blank">linkedin.com/in/pedromfmachado</a></span>
+                <span><a href="https://paginas.fe.up.pt/~ei07074/personal" target="_blank">Portfolio</a></span>
             </div>
         </div>
         
@@ -232,11 +266,44 @@
             <div class="section">
                 <h2 class="section-title">Professional Summary</h2>
                 <p class="summary">
-                    Android engineering leader with 10+ years transforming how teams build, test, and ship products at scale. Known for delivering measurable impact—from 93% test footprint reductions to cutting release cycles from days to hours—while rebuilding teams through organizational change. Currently driving technical excellence for 19M users at XING and contributing to the open-source Android ecosystem.
+                    Engineering leader with 10+ years building scalable mobile platforms and high-performing teams. Proven track record of delivering measurable impact through technical excellence and strategic leadership:
                 </p>
-                <p class="summary" style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">
-                    Technical Leadership • Android Engineering • DevOps & CI/CD • System Architecture • Team Development • Agile Methodologies
-                </p>
+                <ul class="summary">
+                    <li>Reduced test infrastructure footprint by 93% through Roborazzi implementation</li>
+                    <li>Cut release regression testing cycles from full days to hours via CI/CD automation</li>
+                    <li>Rebuilt multiple teams through organizational change, maintaining delivery momentum</li>
+                    <li>Contributing to open-source Android ecosystem while driving technical excellence for 19M users</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Mobile Development</div>
+                        <div class="skill-category-content">Android, Kotlin, Java, Android SDK, Jetpack Compose, Flutter</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">DevOps & Infrastructure</div>
+                        <div class="skill-category-content">CI/CD, GitHub Actions, Jenkins, Docker, Terraform, AWS</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Backend & APIs</div>
+                        <div class="skill-category-content">GraphQL, REST APIs, Python, Golang, PostgreSQL, Elasticsearch</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Testing & Quality</div>
+                        <div class="skill-category-content">Roborazzi, Automated Testing, Test Infrastructure, Quality Gates</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Leadership & Process</div>
+                        <div class="skill-category-content">Team Management, Agile, Stakeholder Management, Technical Strategy</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Architecture</div>
+                        <div class="skill-category-content">System Design, Platform Architecture, Mobile DevOps, Tech Debt Management</div>
+                    </div>
+                </div>
             </div>
             
             <div class="section">
@@ -251,22 +318,31 @@
                     <div class="job-title">Senior Mobile Engineer</div>
                     <div class="job-period">July 2024 – Present</div>
                     <ul class="job-description">
-                        <li>Replaced screenshot testing solution with Roborazzi in Platform team (93% footprint reduction); now maintaining ~10 app sections in Tech Sustainability team</li>
-                        <li>Driving critical tech debt migrations across Android app; championing AI development tool adoption in engineering community</li>
+                        <li>Implemented Roborazzi screenshot testing in Platform team, reducing test footprint by 93% and cutting CI build times while improving developer experience</li>
+                        <li>Maintaining ~10 app sections in Tech Sustainability team, driving community-led migrations and technical initiatives to reduce tech debt</li>
+                        <li>Championing AI-assisted development tool adoption across Android engineering community, establishing best practices and accelerating developer productivity</li>
                     </ul>
                     
                     <div class="job-title">Engineering Manager – Developer Experience & Mobile Releases</div>
                     <div class="job-period">April 2023 – June 2024</div>
                     <ul class="job-description">
-                        <li>Rebuilt DevOps team after losing 50% of members during layoffs; managed critical testing infrastructure and GraphQL services</li>
-                        <li>Eliminated release process friction and enhanced CI/CD tooling, establishing automated quality gates</li>
+                        <li>Rebuilt and stabilized 4-engineer DevOps team after losing 50% of members during company layoffs, maintaining zero disruption to release cadence</li>
+                        <li>Managed critical developer infrastructure including internal testing environments and GraphQL services supporting 100+ engineers</li>
+                        <li>Eliminated release process friction and enhanced CI/CD tooling, establishing automated quality gates for consistent delivery standards</li>
                     </ul>
                     
                     <div class="job-title">Engineering Manager – Memberships</div>
                     <div class="job-period">June 2020 – March 2023</div>
                     <ul class="job-description">
-                        <li>Managed multidisciplinary team of 9-12 engineers delivering Premium and ProJobs paid products; rebuilt ProJobs product from ground up</li>
-                        <li>Drove revenue-impacting features through data-driven product decisions and agile methodologies</li>
+                        <li>Led multidisciplinary team of 9-12 engineers (backend, web, Android) delivering Premium and ProJobs paid subscription products</li>
+                        <li>Rebuilt ProJobs product from ground up, establishing new architecture and delivering revenue-generating features through data-driven A/B testing</li>
+                    </ul>
+                    
+                    <div class="job-title">Senior Mobile Engineer / Android Software Engineer</div>
+                    <div class="job-period">August 2017 – August 2019</div>
+                    <ul class="job-description">
+                        <li>Built Video and Pages features from scratch as part of high-performing multidisciplinary team of senior engineers</li>
+                        <li>Contributed to News & Content platform, collaborating across backend, web, and mobile teams in multicultural environment</li>
                     </ul>
                 </div>
                 
@@ -278,20 +354,9 @@
                     <div class="job-title">Android Team Lead</div>
                     <div class="job-period">August 2019 – May 2020</div>
                     <ul class="job-description">
-                        <li>Led team through COVID-19 restructuring and layoffs; revamped payment flow architecture improving conversion</li>
-                        <li>Reduced release regression testing from 1 full day to hours via automated testing and CI/CD implementation</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="company-header">
-                        <div class="company-name">XING | Porto, Portugal</div>
-                    </div>
-                    
-                    <div class="job-title">Senior Mobile Engineer / Android Software Engineer</div>
-                    <div class="job-period">August 2017 – August 2019</div>
-                    <ul class="job-description">
-                        <li>Built Video and Pages features from scratch; contributed to News & Content in high-performing multidisciplinary team</li>
+                        <li>Led 6-person Android team (4 developers, 2 QA engineers) through challenging COVID-19 restructuring and layoffs while maintaining team morale and productivity</li>
+                        <li>Revamped payment flow architecture, improving conversion rates and user experience across booking funnel</li>
+                        <li>Reduced release regression testing from 1 full day to 2-3 hours by implementing comprehensive automated testing strategy and CI/CD best practices</li>
                     </ul>
                 </div>
                 
@@ -313,9 +378,11 @@
             
             <div class="section">
                 <h2 class="section-title">Additional Information</h2>
-                <p class="summary">
-                    <strong>Languages:</strong> Portuguese (Native), English (Professional) • <strong>Open Source:</strong> Contributor to Roborazzi, Apollo Kotlin, ExoPlayer, Renovate • <strong>Focus:</strong> Team development and high-performing engineering cultures
-                </p>
+                <div class="additional-info">
+                    <div class="info-line"><strong>Languages:</strong> Portuguese (Native), English (Professional Working)</div>
+                    <div class="info-line"><strong>Open Source:</strong> Active contributor to Roborazzi, Apollo Kotlin, ExoPlayer, Renovate</div>
+                    <div class="info-line"><strong>Leadership Philosophy:</strong> Building psychological safety, fostering continuous learning, and empowering teams to deliver their best work through mentorship and clear technical direction</div>
+                </div>
             </div>
         </div>
     </div>
