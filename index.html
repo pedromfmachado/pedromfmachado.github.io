@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Machado - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .contact-info a:hover {
+            border-bottom-color: white;
+        }
+        
+        .content {
+            padding: 30px 40px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.2em;
+            color: #667eea;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #667eea;
+            font-weight: 600;
+        }
+        
+        .summary {
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 6px;
+            margin-top: 10px;
+        }
+        
+        .skill-item {
+            background: #f8f9fa;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            border-left: 3px solid #667eea;
+        }
+        
+        .experience-item {
+            margin-bottom: 15px;
+        }
+        
+        .company-header {
+            margin-bottom: 10px;
+        }
+        
+        .company-name {
+            font-size: 1.05em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .company-description {
+            font-style: italic;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 2px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.95em;
+            margin-top: 8px;
+            margin-bottom: 2px;
+        }
+        
+        .job-period {
+            color: #888;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+        }
+        
+        .job-description {
+            margin-left: 0;
+            line-height: 1.4;
+            font-size: 0.85em;
+        }
+        
+        .job-description li {
+            margin-bottom: 3px;
+            padding-left: 5px;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9em;
+        }
+        
+        .institution {
+            color: #666;
+            margin-top: 2px;
+            font-size: 0.85em;
+        }
+        
+        .additional-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-block h3 {
+            font-size: 0.9em;
+            color: #667eea;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .info-block p {
+            color: #555;
+            line-height: 1.4;
+            font-size: 0.85em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .header {
+                background: #667eea;
+            }
+            
+            .content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px;
+            }
+            
+            .header {
+                padding: 30px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PEDRO MACHADO</h1>
+            <div class="subtitle">Android Engineering Leader | Technical Problem Solver | Team Builder</div>
+            <div class="contact-info">
+                <span>📍 Porto, Portugal</span>
+                <span>✉️ <a href="mailto:pedromfmachado@gmail.com">pedromfmachado@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/pedromfmachado" target="_blank">LinkedIn</a></span>
+                <span>🌐 <a href="https://paginas.fe.up.pt/~ei07074/personal" target="_blank">Portfolio</a></span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Android engineering leader with 10+ years transforming how teams build, test, and ship products at scale. Known for delivering measurable impact—from 93% test footprint reductions to cutting release cycles from days to hours—while rebuilding teams through organizational change. Currently driving technical excellence for 19M users at XING and contributing to the open-source Android ecosystem.
+                </p>
+                <p class="summary" style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">
+                    Technical Leadership • Android Engineering • DevOps & CI/CD • System Architecture • Team Development • Agile Methodologies
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="company-header">
+                        <div class="company-name">XING | Porto, Portugal</div>
+                        <div class="company-description">Leading online business network in German-speaking countries (19M members)</div>
+                    </div>
+                    
+                    <div class="job-title">Senior Mobile Engineer</div>
+                    <div class="job-period">July 2024 – Present</div>
+                    <ul class="job-description">
+                        <li>Replaced screenshot testing solution with Roborazzi in Platform team (93% footprint reduction); now maintaining ~10 app sections in Tech Sustainability team</li>
+                        <li>Driving critical tech debt migrations across Android app; championing AI development tool adoption in engineering community</li>
+                    </ul>
+                    
+                    <div class="job-title">Engineering Manager – Developer Experience & Mobile Releases</div>
+                    <div class="job-period">April 2023 – June 2024</div>
+                    <ul class="job-description">
+                        <li>Rebuilt DevOps team after losing 50% of members during layoffs; managed critical testing infrastructure and GraphQL services</li>
+                        <li>Eliminated release process friction and enhanced CI/CD tooling, establishing automated quality gates</li>
+                    </ul>
+                    
+                    <div class="job-title">Engineering Manager – Memberships</div>
+                    <div class="job-period">June 2020 – March 2023</div>
+                    <ul class="job-description">
+                        <li>Managed multidisciplinary team of 9-12 engineers delivering Premium and ProJobs paid products; rebuilt ProJobs product from ground up</li>
+                        <li>Drove revenue-impacting features through data-driven product decisions and agile methodologies</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-header">
+                        <div class="company-name">Hostelworld Group | Porto, Portugal</div>
+                    </div>
+                    
+                    <div class="job-title">Android Team Lead</div>
+                    <div class="job-period">August 2019 – May 2020</div>
+                    <ul class="job-description">
+                        <li>Led team through COVID-19 restructuring and layoffs; revamped payment flow architecture improving conversion</li>
+                        <li>Reduced release regression testing from 1 full day to hours via automated testing and CI/CD implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-header">
+                        <div class="company-name">XING | Porto, Portugal</div>
+                    </div>
+                    
+                    <div class="job-title">Senior Mobile Engineer / Android Software Engineer</div>
+                    <div class="job-period">August 2017 – August 2019</div>
+                    <ul class="job-description">
+                        <li>Built Video and Pages features from scratch; contributed to News & Content in high-performing multidisciplinary team</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Earlier Experience</div>
+                    <div class="job-period">Lead Android Developer | AppGeneration | 2014 – 2017</div>
+                    <div class="job-period">Web Developer | Memória Visual | 2014</div>
+                    <div class="job-period">Research Assistant | University of Porto | 2013</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Master's Degree, Informatics and Computing Engineering</div>
+                    <div class="institution">Faculty of Engineering, University of Porto | 2007 – 2013</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Additional Information</h2>
+                <p class="summary">
+                    <strong>Languages:</strong> Portuguese (Native), English (Professional) • <strong>Open Source:</strong> Contributor to Roborazzi, Apollo Kotlin, ExoPlayer, Renovate • <strong>Focus:</strong> Team development and high-performing engineering cultures
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
