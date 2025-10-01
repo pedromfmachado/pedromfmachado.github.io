@@ -32,10 +32,23 @@
             padding: 25px 40px;
         }
         
+        .name-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
         .header h1 {
             font-size: 2em;
-            margin-bottom: 5px;
             font-weight: 700;
+            margin: 0;
+        }
+        
+        .location {
+            font-size: 0.9em;
+            font-weight: 400;
+            opacity: 0.95;
         }
         
         .header .subtitle {
@@ -252,13 +265,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>PEDRO MACHADO</h1>
+            <div class="name-line">
+                <h1>PEDRO MACHADO</h1>
+                <span class="location">📍 Porto, Portugal</span>
+            </div>
             <div class="subtitle">Engineering Leader | Mobile & Platform Expertise | Building High-Performing Teams</div>
             <div class="contact-info">
-                <span>Porto, Portugal</span>
-                <span><a href="mailto:pedromfmachado@gmail.com">pedromfmachado@gmail.com</a></span>
-                <span><a href="https://www.linkedin.com/in/pedromfmachado" target="_blank">linkedin.com/in/pedromfmachado</a></span>
-                <span><a href="https://paginas.fe.up.pt/~ei07074/personal" target="_blank">Portfolio</a></span>
+                <span>✉️ <a href="mailto:pedromfmachado@gmail.com">pedromfmachado@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/pedromfmachado" target="_blank">linkedin.com/in/pedromfmachado</a></span>
+                <span>💻 <a href="https://github.com/pedromfmachado" target="_blank">github.com/pedromfmachado</a></span>
             </div>
         </div>
         
